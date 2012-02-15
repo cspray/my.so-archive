@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>100 Most Influential Programming Books According to Stack Overflow</title>
+        <meta name="author" content="Charles Sprayberry" />
+        <meta name="description" content="A question and rebuttal on why PHP is a good language." />
+        <style type="text/css">
+            html {
+                font-family: sans-serif;
+            }
+
+            .so-answer, .so-question {
+                margin: 0 auto;
+                margin-bottom: 1em;
+                width: 80%;
+                padding: 5px;
+                background-color: rgb(250, 250, 250);
+                clear: both;
+                overflow: auto;
+                position: relative;
+                border: 1px solid rgb(210, 210, 210);
+            }
+
+            .post-meta-data {
+                margin: 0 auto;
+                margin-bottom: 1em;
+                width: 90%;
+                padding: 5px;
+                background-color: rgb(250, 250, 250);
+                clear: both;
+                overflow: auto;
+                position: relative;
+            }
+
+            .so-question h2 {
+                float: left;
+            }
+
+            .so-question .post-score, .so-answer .post-score {
+                font-size: 1.75em;
+                text-align: center;
+                padding: 5px;
+                margin: 0;
+                float: right;
+            }
+
+            .post-score p {
+                margin: 0;
+                padding: 0;
+            }
+
+            .post-score .score-label {
+                font-size: .5em;
+            }
+
+            .post-content {
+                clear: both;
+                width: 90%;
+                margin: 0 auto;
+                border-bottom: 1px solid rgb(220, 220, 220);
+            }
+
+            blockquote {
+                padding: 5px;
+                border: 1px solid rgb(220, 220, 220);
+                border-left: 5px solid rgb(220, 220, 220);
+                background-color: white;
+            }
+
+            .owner-profile {
+                float: left;
+                overflow: auto;
+                width: 45%;
+            }
+
+            .owner-profile p {
+                margin: 0;
+            }
+
+            .post-dates {
+                float: right;
+            }
+
+            .owner-profile .owner-image {
+                float: left;
+                margin-right: .5em;
+            }
+        </style>
+    </head>
+    <body>
+<div class="so-question">
+    <h2><a href="http://stackoverflow.com/questions/309300/what-makes-php-a-good-language">What makes PHP a good language?</a></h2>
+    <div class="post-score">
+            <span class="score-label">Score:</span>
+            <p>530</p>
+    </div>
+    <div class="post-content">
+        <p>I made a tongue-in-cheek comment in another question thread calling PHP a terrible language and it got down-voted like crazy. Apparently there are lots of people here who love PHP.</p>
+
+<p>So I'm genuinely curious. What am I missing? What makes PHP a good language?</p>
+
+<p>Here are my reasons for disliking it:</p>
+
+<ul>
+<li><p>PHP has inconsistent naming of built-in and library functions. Predictable naming patterns are important in any design. </p></li>
+<li><p>PHP has inconsistent parameter ordering of built-in functions, eg array_map vs. array_filter which is annoying in the simple cases and raises all sorts of unexpected behaviour or worse.</p></li>
+<li><p>The PHP developers constantly deprecate built-in functions and lower-level functionality. A good example is when they deprecated pass-by-reference for functions. This created a nightmare for anyone doing, say, function callbacks.</p></li>
+<li><p>A lack of consideration in redesign. The above deprecation eliminated the ability to, in many cases, provide default keyword values for functions. They fixed this in PHP 5, but they deprecated the pass-by-reference in PHP 4!</p></li>
+<li><p>Poor execution of name spaces (formerly no name spaces at all). Now that name spaces exist, what do we use as the dereference character? Backslash! The character used universally for escaping, even in PHP!</p></li>
+<li><p>Overly-broad implicit type conversion leads to bugs. I have no problem with implicit conversions of, say, float to integer or back again. But PHP (last I checked) will happily attempt to magically convert an array to an integer.</p></li>
+<li><p>Poor recursion performance. Recursion is a fundamentally important tool for writing in any language; it can make complex algorithms far simpler. Poor support is inexcusable.</p></li>
+<li><p>Functions are case insensitive. I have no idea what they were thinking on this one. A programming language is a way to specify behavior to both a computer and a reader of the code without ambiguity. Case insensitivity introduces much ambiguity.</p></li>
+<li><p>PHP encourages (practically requires) a coupling of processing with presentation. Yes, you can write PHP that doesn't do so, but it's actually easier to write code in the incorrect (from a sound design perspective) manner.</p></li>
+<li><p>PHP performance is abysmal without caching. Does anyone sell a commercial caching product for PHP? Oh, look, the designers of PHP do.</p></li>
+</ul>
+
+<p>Worst of all, PHP convinces people that designing web applications is easy. And it does indeed make much of the effort involved much easier. But the fact is, designing a web application that is both secure and efficient is a very difficult task.</p>
+
+<p>By convincing so many to take up programming, PHP has taught an entire subgroup of programmers bad habits and bad design. It's given them access to capabilities that they lack the understanding to use safely. This has led to PHP's reputation as being insecure.</p>
+
+<p>(However, I will readily admit that PHP is no more or less secure than any other web programming language.)</p>
+
+<p>What is it that I'm missing about PHP? I'm seeing an organically-grown, poorly-managed mess of a language that's spawning poor programmers.</p>
+
+<p>So convince me otherwise!</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for Jason L" src="http://www.gravatar.com/avatar/e9525b26606e1ae2f21a452fd2414e7d?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/35616/jason-l">Jason L</a></p>
+            <p class="owner-reputation">1721</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-11-21 11:16:42</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+
+</div>
+<div class="so-answer">
+    <div class="post-score">
+        <span class="score-label">Score:</span>
+        <p>621</p>
+    </div>
+    <div class="post-content">
+        <p>I'll take a stab at responding to each of your bullet points</p>
+
+<blockquote>
+  <p>PHP has inconsistent naming of
+  built-in and library functions.
+  Predictable naming patterns are
+  important in any design.</p>
+</blockquote>
+
+<p>I both love and hate this topic.  Because at its core, this issue is correct.  Why are some bi-word function split with an underscore, and some aren't?  Why do needle and haystack parameters swap positions in the argument signature sometimes?  It's ridiculous.   But at the end of the day... does this really matter?  My IDE with intellisense and php.net just a browser click away, this is just plain not that big of a deal.  Is it a negative against PHP as a language? Yes. Does it hinder my ability to be an effective programmer? No.</p>
+
+<blockquote>
+  <p>The PHP developers constantly
+  deprecate built-in functions and
+  lower-level functionality. A good
+  example is when they deprecated
+  pass-by-reference for functions. This
+  created a nightmare for anyone doing,
+  say, function callbacks.</p>
+</blockquote>
+
+<p>Personally, I think this is not a good point.  Deprecation is necessary to the evolution of a language, especially one that has as much kruft as PHP does.  PHP gets a lot of flak for "making it easy to be a bad programmer*" but at the same time, the PHP group also gets in trouble when they try to remove stupid constructs from the language, such as call-time pass-by-reference.  Eliminating call-time pass-by-reference was one of the best moves they ever made.  There was no easier way for a novice developer to shoot themselves in the foot than with this "feature".</p>
+
+<blockquote>
+  <p>A lack of consideration in redesign.
+  The above deprecation eliminated the
+  ability to, in many cases, provide
+  default keyword values for functions.
+  They fixed this in PHP 5, but they
+  deprecated the pass-by-reference in
+  PHP 4!</p>
+</blockquote>
+
+<p>I don't think there's a general lack of consideration at all, I think you just got stung by this particular change and have been left with a sour taste in your mouth.  Language changes are often known months if not years ahead of time.  A migration guide was provided for the move from 4 to 5, and the version differences are documented in the manual.  Call-time pass-by-reference was a horrible "feature" and doesn't give the developer any expressive power they can't get by other means. I'm glad it is gone (along with other crap like magic quotes)</p>
+
+<blockquote>
+  <p>Poor execution of name spaces
+  (formerly no name spaces at all). Now
+  that name spaces exist, what do we use
+  as the dereference character?
+  Backslash! The character used
+  universally for escaping, even in PHP!</p>
+</blockquote>
+
+<p>I have mixed feelings about this.  Part of me thinks "who cares, character escaping has no meaning outside of a string anyway", and part of me thinks "surely they could use something better".  But could they?  I don't know, I'm not a developer for the Zend parser.  Is it a huge oversight that until 5.3 PHP never had namespaces at all?  Yes, absolutely.</p>
+
+<blockquote>
+  <p>Overly-broad implicit type conversion
+  leads to bugs. I have no problem with
+  implicit conversions of, say, float to
+  integer or back again. But PHP (last I
+  checked) will happily attempt to
+  magically convert an array to an
+  integer.</p>
+</blockquote>
+
+<p>I think it's ok to disagree with how PHP does this, but disagree that it makes the language "bad". But ask me how much I want to sit in this topic and argue about weak vs strong typing. (P.S. I don't, <em>at all</em>) For the record: PHP will issue an E_WARNING level error when the type of an argument matters and cannot by solved by coercion.  </p>
+
+<blockquote>
+  <p>Poor recursion performance. Recursion
+  is a fundamentally important tool for
+  writing in any language; it can make
+  complex algorithms far simpler. Poor
+  support is inexcusable.</p>
+</blockquote>
+
+<p>PHP is a DSL for the web.  I've been doing it full-time for 8 years and have maybe used recursion 4 or 5 times, usually for some type of annoying directory or XML traversal.  It's just not a pattern that is needed for web development that often.  I'm not excusing the slow performance, but this is an academic issue far more than it is a production issue.  If you need really powerful recursive performance, PHP is already the wrong language for you.</p>
+
+<blockquote>
+  <p>Functions are case insensitive. I have
+  no idea what they were thinking on
+  this one. A programming language is a
+  way to specify behavior to both a
+  computer and a reader of the code
+  without ambiguity. Case insensitivity
+  introduces much ambiguity.</p>
+</blockquote>
+
+<p>I totally 100% agree with this.</p>
+
+<blockquote>
+  <p>PHP encourages (practically requires)
+  a coupling of processing with
+  presentation. Yes, you can write PHP
+  that doesn't do so, but it's actually
+  easier to write code in the incorrect
+  (from a sound design perspective)
+  manner.</p>
+</blockquote>
+
+<p>*Hmmm, this topic sounds desperately familiar...</p>
+
+<p>But seriously, I find it remarkable that people will complain about a language that will absolutely 100% let you implement any output system you want (the sheer volume and style of PHP templating systems alone speaks to this) - OR - skip all that overhead and just output directly.  This does not make PHP bad at all.  It's part of what makes PHP good.</p>
+
+<blockquote>
+  <p>PHP performance is abysmal without
+  caching. Does anyone sell a commercial
+  caching product for PHP? Oh, look, the
+  designers of PHP do.</p>
+</blockquote>
+
+<p>Do you mean bytecode caching (like an accelerator), or output caching?</p>
+
+<p>If the former, then I don't really know how much I care about this topic.  Accelerators are free and easy to run.  We could argue about why it isn't part of the language but in the end, I don't think it matters much.</p>
+
+<p>If you are talking about output caching then I don't know what to say to you.  ANY web project with significant traffic needs caching (seed podcast #27, for example).  This is not a PHP-specific issue <em>at all</em>.</p>
+
+<p>In summary, I think you consider PHP a "bad" language in a very academic fashion.  And in your previous post you were probably voted down by people like me who use PHP to "get things done".  </p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for Peter Bailey" src="http://www.gravatar.com/avatar/5fe96558ef20feb210cf4fd517e7c229?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/8815/peter-bailey">Peter Bailey</a></p>
+            <p class="owner-reputation">34132</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-11-21 12:55:32</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
