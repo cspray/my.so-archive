@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>100 Most Influential Programming Books According to Stack Overflow</title>
+        <meta name="author" content="Charles Sprayberry" />
+        <meta name="description" content="A question and rebuttal on why PHP is a good language." />
+        <style type="text/css">
+            html {
+                font-family: sans-serif;
+            }
+
+            .so-answer, .so-question {
+                margin: 0 auto;
+                margin-bottom: 1em;
+                width: 80%;
+                padding: 5px;
+                background-color: rgb(250, 250, 250);
+                clear: both;
+                overflow: auto;
+                position: relative;
+                border: 1px solid rgb(210, 210, 210);
+            }
+
+            .post-meta-data {
+                margin: 0 auto;
+                margin-bottom: 1em;
+                width: 90%;
+                padding: 5px;
+                background-color: rgb(250, 250, 250);
+                clear: both;
+                overflow: auto;
+                position: relative;
+            }
+
+            .so-question h2 {
+                float: left;
+            }
+
+            .so-question .post-score, .so-answer .post-score {
+                font-size: 1.75em;
+                text-align: center;
+                padding: 5px;
+                margin: 0;
+                float: right;
+            }
+
+            .post-score p {
+                margin: 0;
+                padding: 0;
+            }
+
+            .post-score .score-label {
+                font-size: .5em;
+            }
+
+            .post-content {
+                clear: both;
+                width: 90%;
+                margin: 0 auto;
+                border-bottom: 1px solid rgb(220, 220, 220);
+            }
+
+            blockquote {
+                padding: 5px;
+                border: 1px solid rgb(220, 220, 220);
+                border-left: 5px solid rgb(220, 220, 220);
+                background-color: white;
+            }
+
+            .owner-profile {
+                float: left;
+                overflow: auto;
+                width: 45%;
+            }
+
+            .owner-profile p {
+                margin: 0;
+            }
+
+            .post-dates {
+                float: right;
+            }
+
+            .owner-profile .owner-image {
+                float: left;
+                margin-right: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="so-question">
+    <h2><a href="http://stackoverflow.com/questions/114342/what-are-code-smells-what-is-the-best-way-to-correct-them">What are Code Smells? What is the best way to correct them?</a></h2>
+    <div class="post-score">
+        <span class="score-label">Score:</span>
+        500
+    </div>
+    <div class="post-content">
+        <p>OK, so I know <em>what</em> a code smell <em>is</em>, and the <a href="http://en.wikipedia.org/wiki/Code_smell" rel="nofollow">Wikipedia Article</a> is pretty clear in its definition:</p>
+
+<blockquote>
+  <p>In computer programming, code smell is
+  any symptom in the source code of a
+  computer program that indicates
+  something may be wrong. It generally
+  indicates that the code should be
+  refactored or the overall design
+  should be reexamined. The term appears
+  to have been coined by Kent Beck on
+  WardsWiki. Usage of the term increased
+  after it was featured in Refactoring.
+  Improving the Design of Existing Code.</p>
+</blockquote>
+
+<p>I know it also provides a list of common code smells. But I thought it would be great if we could get clear list of not only <strong>what code smells there are</strong>, but also <strong>how to correct them.</strong></p>
+
+<h2>One smell per answer, please.</h2>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for Rob Cooper" src="http://www.gravatar.com/avatar/7712490ab1a59d1c825ad83427f9d554?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/832/rob-cooper">Rob Cooper</a></p>
+            <p class="owner-reputation">10800</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 07:34:19</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div>
+<div class="so-answer">
+    <div class="post-score">
+        426
+    </div>
+    <div class="post-content">
+        <p>Huge methods/functions. This is always a sure sign of impending failure.</p>
+
+<p>Huge methods should be refactored into smaller methods and functions, with more generic uses.</p>
+
+<p>See also these related questions on SO:</p>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/20981/how-many-lines-of-code-is-too-many">How many lines of code is too many?</a></li>
+<li><a href="http://stackoverflow.com/questions/129599/best-rule-for-maximum-function-size">Best rule for maximum function size?</a></li>
+</ul>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for GEOCHET" src="http://www.gravatar.com/avatar/680b8d4a9b843a858148493db5ef0164?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/5640/geochet">GEOCHET</a></p>
+            <p class="owner-reputation">10596</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 07:37:31</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        409
+    </div>
+    <div class="post-content">
+        <p><strong>Commented out code.</strong> I realize that this one is a lot of people favorite thing to do, but it is always wrong.</p>
+
+<p>We are in an age when it is easy to setup a source code versioning system. If code is worth keeping, then check it in, it is saved now and forever. If you want to replace it with a new version delete it:</p>
+
+<ul>
+<li>The old version will be around if you need it.</li>
+<li>Commented out code makes code hard to read since it still looks like code, and takes up the same space as real code. </li>
+<li>After a few changes to the original code, the commented out version is way out of date </li>
+</ul>
+
+<p>I once saw a function that had over a hundred lines of commented out code, when I removed the commented out code, it was only 2 lines long.</p>
+
+<p>Sometimes we comment out code during debugging and development. This is OK, just make sure to delete it before it is checked in.</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for Stefan Rusek" src="http://www.gravatar.com/avatar/f7a108b02c5e522e1a4c64ff7fc33b7a?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/19704/stefan-rusek">Stefan Rusek</a></p>
+            <p class="owner-reputation">1561</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 08:32:41</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        388
+    </div>
+    <div class="post-content">
+        <p><strong>Duplicate or copy/pasted code</strong>. When you start seeing things that could easily be reused that aren't, something is very wrong.</p>
+
+<p>Refactoring to make reusable assemblies is the only cure.</p>
+
+<p>See the Once and Only Once principle, and the Don't Repeat Yourself principle.</p>
+
+<p><a href="http://www.redhillconsulting.com.au/products/simian" rel="nofollow">Simian</a>, a code similarity detection tool works wonders for fixing this.</p>
+
+<p><a href="http://duplo.giants.ch/" rel="nofollow">duplo</a> is a good open source project that provides a free alternative.</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for GEOCHET" src="http://www.gravatar.com/avatar/680b8d4a9b843a858148493db5ef0164?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/5640/geochet">GEOCHET</a></p>
+            <p class="owner-reputation">10596</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 07:38:24</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        274
+    </div>
+    <div class="post-content">
+        <p><strong>Methods with a ridiculous (e.g. 7+) amount of parameters.</strong> This usually means that there should be a new class introduced (which, when passed, is called an indirect parameter.)</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for TraumaPony" src="http://www.gravatar.com/avatar/292735c946e23b74087633232f49c58d?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/18658/traumapony">TraumaPony</a></p>
+            <p class="owner-reputation">4908</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 07:40:07</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        254
+    </div>
+    <div class="post-content">
+        <p><strong>Avoid abbreviations.</strong></p>
+
+<p>Variable names such as <code>x</code>, <code>xx</code>, <code>xx2</code>, <code>foo</code> etc (obviously if you are using Cartesian coordinates, 'x' is perfectly appropriate.) Rename.</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for TraumaPony" src="http://www.gravatar.com/avatar/292735c946e23b74087633232f49c58d?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/18658/traumapony">TraumaPony</a></p>
+            <p class="owner-reputation">4908</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 07:43:20</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        215
+    </div>
+    <div class="post-content">
+        <p><strong>Empty catch blocks.</strong> Especially if the exception being ignored is <code>java.lang.Exception</code>/<code>System.Exception</code>.</p>
+
+<p>If a block of code could throw multiple exceptions, there should be multiple catches. Each handling the appropriate exception accordingly.</p>
+
+<p>An empty catch might mean the developer doesn't have an understanding of logic in the try, and the empty catch was added to pass the compiler. At the very least they should contain some kind of logging logic.</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for bcash" src="http://www.gravatar.com/avatar/d13704630b179eaa31cddc9c856b15ec?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/5814/bcash">bcash</a></p>
+            <p class="owner-reputation">1542</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 07:58:02</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        201
+    </div>
+    <div class="post-content">
+        <p><strong>Comments that focus on what the code does and not why.</strong> The code tells you what it does (okay, there are exceptions, but that is another smell). Try to use the comment to explain why.</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for Gamecat" src="http://www.gravatar.com/avatar/0b4b433679e1fb52f7e2ef4ea492496d?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/18061/gamecat">Gamecat</a></p>
+            <p class="owner-reputation">28245</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 07:54:27</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        186
+    </div>
+    <div class="post-content">
+        <h1>Pacman ifs</h1>
+
+<p><a href="http://stackoverflow.com/questions/114342/what-are-code-smells-what-is-the-best-way-to-correct-them#115975">nested ifs</a></p>
+
+<pre><code>if (cond1) {
+    /* Something */
+    if (cond2) {
+        /* Something else */
+        if (cond3) {
+            /* Something else, again */
+            if (cond4) {
+                /* Something else, again */
+                if (cond5) {
+                    /* Something else, again */
+                    if (cond6) {
+                        /* Something else, again */
+                        if (cond7) {
+                            /* Something else, again */
+                            if (cond8) {
+                                /* Something else, again */
+                                if (cond9) {
+                                    /* Something else, again */
+                                    if (cond10) {
+                                        /* Something else, again */
+                                        if (cond11) {
+                                            /* Something else, again */
+                                            if (cond12) {
+                                                /* Something else, again */
+                                                if (cond13) {
+                                                    /* Something else, again */
+                                                    if (cond14) {
+                                                        /* Something else, again */
+                                                        if (cond15) {
+                                                            /* Something else, again */
+                                                            if (cond16) {
+                                                                /* Something else, again */
+                                                                if (cond17) {
+                                                                    /* Something else, again */
+                                                                    if (cond18) {
+                                                                        /* Something else, again */
+                                                                        if (cond19) {
+                                                                            /* Something else, again */
+                                                                            if (cond20) {
+                                                                                /* Something else, again */
+                                                                                if {
+                                                                                    /* And goes on... */
+</code></pre>
+
+<p>a severe stench emanates when a horizontal scroll bar appears</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for Mark Stock" src="http://www.gravatar.com/avatar/2196d0fd9e8620042bffbe87d4da8648?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/19737/mark-stock">Mark Stock</a></p>
+            <p class="owner-reputation">1108</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 13:58:20</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        169
+    </div>
+    <div class="post-content">
+        <h2>Magic numbers</h2>
+
+<p>If code has lots of numbers all the way through it will be a pain to change them and you may miss something. Those numbers might be documented or commented, but comments and code can very easily get out of sync with each other. When you next read the code will you remember what the number means or why it was chosen?</p>
+
+<p>Fix this by replacing the numbers with constants that have meaningful names. But don't make the names too long. It's up to you whether to import these constants from another file or limit them to the immediate scope.</p>
+
+<p>Similarly for excessive amounts of string literals in the code, either use well-named constants or read them from a resource file. This can also aid internationalisation/translation efforts.</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for John Ferguson" src="http://www.gravatar.com/avatar/d1f3f47677791b12c86bbcc115349fa7?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/8312/john-ferguson">John Ferguson</a></p>
+            <p class="owner-reputation">639</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-23 08:42:51</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        158
+    </div>
+    <div class="post-content">
+        <h2>Not being able to understand what given piece of code does in less than 15 seconds</h2>
+
+<p>99 chances out of 100 that this code is wrong. Either it's too complicated or just badly engineered.</p>
+
+<h3>Cure:</h3>
+
+<p>Find the code author, make him to explain what the darn code does until he starts to cry "I wrote it yesterday, how can I remember what it does?! I would never write such code again! I promise!!!"</p>
+
+<h3>Alternate cure:</h3>
+
+<p>Refactor to make the code plain.  Everything has a good name.</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for aku" src="http://www.gravatar.com/avatar/73a14c05d010066c0ea9f5ad934a8510?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/1196/aku">aku</a></p>
+            <p class="owner-reputation">30611</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 09:16:10</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        158
+    </div>
+    <div class="post-content">
+        <p><strong>Huge code blocks in <code>switch</code> statements.</strong>
+Move code to separate functions. Consider using a function table (dictionary).</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for aku" src="http://www.gravatar.com/avatar/73a14c05d010066c0ea9f5ad934a8510?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/1196/aku">aku</a></p>
+            <p class="owner-reputation">30611</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 07:52:11</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        153
+    </div>
+    <div class="post-content">
+        <p><strong>Reusing Variables</strong></p>
+
+<p>Using the same variable to mean different things in different parts of the same thing, just to save a couple of bytes on the stack (or even just because you couldn't be bothered declaring a new variable).  It's very confusing - don't do it!<br>
+Declare a new variable - the compiler is smart enough to place them in the same memory location for you if their uses don't overlap.</p>
+
+<p><strong>Example</strong></p>
+
+<pre><code>var x = value;
+if (x &gt; y) doSomething();
+
+x = someOtherValue;
+if (x == 'Doh') doSomethingElse();
+</code></pre>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for MrZebra" src="http://www.gravatar.com/avatar/cefa5d42a6ebb0af362e5251b662b58f?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/17440/mrzebra">MrZebra</a></p>
+            <p class="owner-reputation">3817</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 09:48:55</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        146
+    </div>
+    <div class="post-content">
+        <p><strong>Premature optimization</strong> </p>
+
+<p>If you read application level code littered with bit shifts instead of multiplication, and similar optimization tidbits, consider educating the author about the tradeoff between optimization and readability.</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for Coincoin" src="http://www.gravatar.com/avatar/621f5ee6cf6e295d1b5fa45bde67c803?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/42/coincoin">Coincoin</a></p>
+            <p class="owner-reputation">8065</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 08:50:14</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        145
+    </div>
+    <div class="post-content">
+        <p><strong>Getting and re-getting the same property.</strong></p>
+
+<p>e.g.</p>
+
+<pre><code>if(getValue() != null &amp;&amp; getValue().length() &gt; 0
+    &amp;&amp; !getValue().startWith("Hugo") ...)
+</code></pre>
+
+<p>Who knows what is going on inside getValue()? Could be something costly.</p>
+
+<p>I would prefer:</p>
+
+<pre><code>String value = getValue();
+if(value != null &amp;&amp; value.length() &gt; 0
+    &amp;&amp; !value.startsWith("Hugo") ...)
+</code></pre>
+
+<p><strong>Edit</strong></p>
+
+<p>I would agree with those commentators who say leave it up to the JIT to optimise the call. This will work in most cases. However, this became a bit of a problem for me in a framework where some getters did not simply pick up a property but in fact performed a hash table lookup or even disk or network action (can't remember which now). I guess the JIT can't do much there.</p>
+
+<p>My point is that you don't always know what the getter does. Perhaps a naming convention such as getX for properties and fetchX for other actions might help. I just think getting/fetching a value once and then working with a copy of the value avoids the problem (unless you really know what is going on in the getter, of course)</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for paul" src="http://www.gravatar.com/avatar/bd970cd050a8be614be642a27a6c7371?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/11249/paul">paul</a></p>
+            <p class="owner-reputation">2986</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 08:25:38</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        143
+    </div>
+    <div class="post-content">
+        <p><strong>Overengineered design</strong></p>
+
+<p>This is common when introducing ten thousands frameworks and then handling everything indirectly, even for very simple chores. </p>
+
+<p>So you have an ORM and a MVC framework, and several different layers in your application: DAO, BO, Entities, Renderers, Factories, at least a couple of contexts, interfaces crawl all over your packages, you have adapters even for two classes, proxies, delegate methods... to the point that there isn't even a single class which does not <strong>extend</strong> or <strong>implement</strong> something else.</p>
+
+<p>In this case you'd better prune some dead branches: remove interfaces wherever they don't provide useful class interchangeability, remove man-in-the-middle classes, specialize too generic methods, throw in some generics/templates where you wrote your own classes that are only wrappers for collections and don't really add any value to your design.</p>
+
+<p><em>NOTE:</em> of course this does not apply to larger, ever changing applications where the layers and the intermediate objects are really useful to decouple stuff that otherwise would be handled by <em>shotgun surgery</em>.</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for Manrico Corazzi" src="http://www.gravatar.com/avatar/d78639b4431463d1ac1bba9e95d0dfe1?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/4690/manrico-corazzi">Manrico Corazzi</a></p>
+            <p class="owner-reputation">4153</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 08:27:39</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        131
+    </div>
+    <div class="post-content">
+        <h1>Negatives</h1>
+
+<p>They are a burden on the human mind.</p>
+
+<h2>Double negatives</h2>
+
+<p>I ran into a piece of code such as:</p>
+
+<pre><code>if( ! value != 1 )
+</code></pre>
+
+<p>Quite confusing to read! I suspect the original programmer
+was debugging and changing the logic made the program work;
+however was too lazy to properly change to:</p>
+
+<pre><code>if( value == 1 )
+</code></pre>
+
+<h2><code>Else</code> is a negative</h2>
+
+<p>When you see <code>else</code> you have to mentally negate the original
+condition. If the original condition already includes a
+negative, then you have to work extra hard. Negate the
+condition and swap the conditional clauses.</p>
+
+<p>If the <code>else</code> clause is the "happy path", <em>i.e.</em> the non-
+error case, then your brain has to work to follow the flow
+of code. Use Guard Clauses instead.</p>
+
+<h2>Single negatives</h2>
+
+<p>Even single negatives require mental effort.  So it's easier to read:</p>
+
+<pre><code>if (IsSummer())
+</code></pre>
+
+<p>than</p>
+
+<pre><code>if (!IsWinter())
+</code></pre>
+
+<p>Also</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for Marcel Tjandraatmadja" src="http://www.gravatar.com/avatar/05b298156a20aaac7827d1ae91038717?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/131/marcel-tjandraatmadja">Marcel Tjandraatmadja</a></p>
+            <p class="owner-reputation">1546</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 18:48:27</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        114
+    </div>
+    <div class="post-content">
+        <h2>Methods with unexplained boolean arguments</h2>
+
+<p>Methods with boolean boolean arguments tend to hurt readability.  A common example I've seen is the following:</p>
+
+<pre><code> myfile = CreateFile("foo.txt", true);
+</code></pre>
+
+<p>In this example, it's reasonable to assume that this snippet creates a file called "foo.txt",  but we have no idea what the "true" means.  However, if the snippet was instead:</p>
+
+<pre><code> myfile = CreateTempFile("foo.txt");
+</code></pre>
+
+<p>You'd have a much better idea of what the coder intended.  With that in mind,  it's generally a good idea to break up methods with boolean arguments into two methods.  So that</p>
+
+<pre><code> File CreateFile(String name, boolean isTemp);
+</code></pre>
+
+<p>becomes </p>
+
+<pre><code> File CreateFile(String name);
+ File CreateTempFile(String name);
+</code></pre>
+
+<hr>
+
+<p>You can also get arround this by creating an enum:</p>
+
+<pre><code>myFile = CreateFile("foo.txt", FileType.Temp);
+</code></pre>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for Jim d" src="http://www.gravatar.com/avatar/#" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/-1/community">Jim d</a></p>
+            <p class="owner-reputation">0</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-24 20:44:38</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        92
+    </div>
+    <div class="post-content">
+        <p><strong>Static variables</strong> or the design patterns variant: <strong>Singletons</strong></p>
+
+<p>How to refactor:</p>
+
+<ol>
+<li><p>Find the largest scope in which the variable lives, and move it there as a non-static variable (if it is a singleton, convert it to a non-singleton and make an instance to pass around).</p></li>
+<li><p>You should now get lots of compile errors (missing reference to the static variable/singleton). For each one, decide whether it makes best sense to inject the reference as a instance member in the class (either in the constructor, if it is a mandatory dependency, or in a setter-method, if it is an optional dependency) or to pass the reference in the method-call. Make the change. This will probably propagate outwards until you reach the outer scope where the variable now lives.</p></li>
+</ol>
+
+<p>A dependency injection framework, such as Guice, can make this easier. The DI framework can be configured to create only one instance of the class and pass it as a constructor parameter to all classes which use it. In Guice you would annotate the singleton class with <a href="http://code.google.com/p/google-guice/wiki/Scopes" rel="nofollow">@Singleton</a> and that would be it.</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for Rasmus Faber" src="http://www.gravatar.com/avatar/60a02c390b3aaa8afc9a427298e95fca?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/5542/rasmus-faber">Rasmus Faber</a></p>
+            <p class="owner-reputation">13982</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 07:44:43</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        85
+    </div>
+    <div class="post-content">
+        <h3>Presence of types whose names start\end with "Utility", "Helper" or "Manager"</h3>
+
+<p>This is a <em>very good sign</em> of presence of types violating SRP (Single Responsibility Principle).</p>
+
+<p>Analyze such types carefully, Often you can find that single class contains a bunch of unrelated methods - split it. Sometimes you can find that some method is used only once (often happens after refactoring), consider purge such methods.</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for aku" src="http://www.gravatar.com/avatar/73a14c05d010066c0ea9f5ad934a8510?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/1196/aku">aku</a></p>
+            <p class="owner-reputation">30611</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 08:16:48</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        82
+    </div>
+    <div class="post-content">
+        <p>Just a general comment about code smells:</p>
+
+<p>Both of my answers have received several comments like this: "But sometimes XX is the right thing to do" or "If you always replace YY with ZZ you are going to end up with an overengineering pile of ...".</p>
+
+<p>I think these remarks mistake the meaning of a code smell: a code smell is not the same as an error - if they were, we would probably just make the compiler find them and return an error. </p>
+
+<p>A code smell is nothing more than something that suggests that here is a possible refactoring. Smells may be more or less strong, and it is usually impossible to make hard and fast rules about them.</p>
+
+<p>Sometimes a method with six arguments may be the best solution, I don't think I would like a method with seven arguments, but I would oppose a coding standard that forbid them. In some applications, a static variable might make perfect sense, but I wouldn't like that a large application hid its entire internal dependency structure in a big clump of static variables.</p>
+
+<p>To summarize: code smells are simple heuristics that indicate that you <em>might want to</em> consider refactoring and <em>suggest</em> a possible appropriate refactoring.</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for Rasmus Faber" src="http://www.gravatar.com/avatar/60a02c390b3aaa8afc9a427298e95fca?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/5542/rasmus-faber">Rasmus Faber</a></p>
+            <p class="owner-reputation">13982</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 09:45:24</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        82
+    </div>
+    <div class="post-content">
+        <p>Inconsistent naming of variables, methods, functions etc (mixing <code>CamelCase</code> with <code>hpwsHungarian</code> with <code>everything_separated_with_underscores</code>)</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for tzot" src="http://www.gravatar.com/avatar/132aeb33251a1eddee3efc87633c0af1?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/6899/tzot">tzot</a></p>
+            <p class="owner-reputation">16159</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 07:46:48</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div><div class="so-answer">
+    <div class="post-score">
+        76
+    </div>
+    <div class="post-content">
+        <p><strong>Primitive Obsession</strong></p>
+
+<p>Always using "int" and "double" where you should have a class such as "Money" or "OrderValue" so that you can apply different logic or rounding. It also ensure method parameters are better structured.</p>
+
+<p><code>string</code> is the most common object of such obsession.</p>
+
+<p>...</p>
+
+<p>Judging by the comments, an example is called for.  Here's one I saw a couple weeks ago.</p>
+
+<p>We have an application that processes Word document content.  All through our app, we had string parameters that took file paths to those documents.  We found a bug in one place where, due to a poorly-named parameter, we were passing in a file <em>name</em> rather than a file <em>path</em>, causing the app to look for the file (and not find it) in the default <em>application</em> path.</p>
+
+<p>The immediate problem was the poorly named parameter.  But the real problem was passing strings around.  The solution was to use a class like this:</p>
+
+<pre><code>public class FileLocation
+{
+    readonly string fullPath;
+
+    public FileLocation(string fullPath)
+    {
+        this.fullPath = fullPath;
+    }
+
+    public string FullPath
+    {
+        get { return fullPath; }
+    }
+}
+</code></pre>
+
+<p>Your first reaction may be that this is a class that hardly does anything.  You're right; but that's not the point.  The point is that now instead of</p>
+
+<pre><code>public void ProcessDocument(string file)
+</code></pre>
+
+<p>we have</p>
+
+<pre><code>public void ProcessDocument(FileLocation file)
+</code></pre>
+
+<p>As long as we're constructing FileLocation objects correctly in the one place that generates them, we can pass them through the rest of the app with no worries, because now we can't possibly confuse them with file names, or directories, or any other type of string.  This is the most fundamental reason to correct primitive obsession.</p>
+
+    </div>
+    <div class="post-meta-data">
+        <div class="owner-profile">
+            <p class="owner-image"><img alt="Gravatar for Paul Shannon" src="http://www.gravatar.com/avatar/714ad6bdae48d0f12a6d4072b6988cb9?d=identicon&r=PG" /></p>
+            <p class="owner-name"><a href="http://stackoverflow.com/users/11503/paul-shannon">Paul Shannon</a></p>
+            <p class="owner-reputation">626</p>
+        </div>
+        <div class="post-dates">
+            <p class="create-date">Created: 2008-09-22 07:45:06</p>
+            <p class="edit-date"></p>
+        </div>
+    </div>
+</div>
+
+
+    </body>
+</html>
